@@ -1,0 +1,332 @@
+@import "reset.scss";
+
+%border{
+    border: 2px solid #ff0000;
+  }
+%border2{
+    border: 2px solid #2bff00;
+  }
+
+body{
+    background-color: #1C1719;
+}
+
+// CONTAINER
+
+.container{
+    position: absolute;
+    width: 100%;
+    max-width: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+// HEADER
+
+.header__background{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: #AC396D;
+}
+
+.header{
+    box-sizing: border-box;
+}
+
+// NAV
+
+.nav{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Torus', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.menu{
+    display: flex;
+    width: 52%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.itemcount{
+    display: inline-block;
+    position: relative;
+}
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+
+
+.logo{
+    margin-top: 2px;
+    width: 39px;
+    height: 39px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #F6E9EF;
+}
+
+.fa{
+    color: white;
+    border: 3px solid #C16B92;
+    border-radius: 50%;
+    padding: 0.55rem;
+    box-sizing: border-box;
+}
+
+
+.menu__other{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.nav__link__other__big{
+    text-decoration: none;
+    color: #F6E9EF;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 5px;
+    border: 2px solid #C16B92;
+    border-radius: 16px;
+}
+
+.notifications{
+    width: 37.58px * 1.3333;
+    height: 37.58px;
+    border: 3px solid #C16B92;
+    border-radius: 42px;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.fa-comment-alt{
+    border: none;
+}
+
+.fa-inbox{
+    border: none;
+}
+
+.notification-item-count{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+.flag{
+    width: 37.58px * 1.3333;
+    height: 37.58px;
+    border: 3px solid #C16B92;
+    border-radius: 42px;
+    box-sizing: border-box;
+    padding: 5px;
+    display: block;
+}
+
+.nav__image1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+img{
+    display: block;
+}
+
+.top-background{
+    width: 100%;
+    height: 320px;
+    position: absolute;
+    z-index: -1;
+}
+
+.nav__image {
+    width: 37px;
+    border: 1px solid #AC396D;
+    border-radius: 50%;
+    padding: 1px;
+}
+
+.nav-image-flag{
+    font-size: 16px;
+}
+
+.search{
+    width: 14px;
+    padding: 15px;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 320px;
+}
+
+.player-info-header{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1000px;
+    height: 55px;
+    background-color: #2E1F25;
+    // background-image: url(/assets/images/loved.png);
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+}
+
+.header-icon{
+    background-image: url(../images/profile-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.header-title{
+    color: white;
+    margin: auto 0;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.game-mode{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    .game-mode__items{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;       
+        .game-mode__item{
+            margin: 0 10px;
+            .game-mode__link{
+                text-decoration: none;
+                color: #fc569b;
+                font-family: 'Inter', sans-serif;
+                font-size: 14px;
+                transition: color .3s ease;
+            }   
+            &:hover{
+                .game-mode__link{
+                    color: white;
+                }
+                .fa-star{
+                    color: white;
+                }
+            }       
+            
+        }
+        .game-mode__item-active{
+            color: white;
+            .game-mode__link{
+                color: white;
+            }
+        }
+    }
+}
+
+.header-edit{
+    display: flex;
+    align-items: center;
+    .fa-pencil{
+        color: white;
+        font-size: 12px;
+        background-color: #54454C;
+        border-radius: 50%;
+        padding: 8px;
+        margin-right: 10px;
+        transition: background-color .3s ease;
+        &:hover{
+            background-color:#705C65;
+        }
+    }
+}
+
+.player-info{
+    background-color: #3D2932;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    .header-row-items{
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-left: -10px;
+        height: 100%;
+        &:before{
+            content: "";
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            background-color: #FF66AB;
+            width: calc(100% - 20px);
+        }
+        .header-row-item{
+            padding: 0 10px;   
+            position: relative;
+            &:after{
+                content: "";
+                height: 5px;
+                position: absolute;
+                top: 188%;
+                left: 10px;
+                border-radius: 4px;
+                background-color: #FF66AB;
+                width: 0;
+            }
+            &:hover:after{
+                width: calc(100% - 20px);
+            }
+            .header-row-item-link{
+                text-decoration: none;
+                color: #D99EAB;
+                font-size: 14px;
+                font-weight: 500;
+                font-family: 'Inter', sans-serif;
+                position: relative;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+        .header-row-item-active{
+            .header-row-item-link{
+                color: white;
+                box-sizing: border-box;
+                font-weight: 700;
+                &:after{
+                    content: "";
+                    height: 5px;
+                    position: absolute;
+                    top: 180%;
+                    left: 0;
+                    border-radius: 4px;
+                    background-color: #FF66AB;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
